@@ -96,62 +96,63 @@ int main(void)
   MX_RTC_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  RTC_TimeTypeDef gTime;
-  uint8_t seconds;
-  uint8_t tens_seconds;
-  uint8_t minutes;
-  uint8_t tens_minutes;
-  uint8_t hour;
-  uint8_t tens_hour;
+  // RTC_TimeTypeDef gTime;
+  // uint8_t seconds;
+  // uint8_t tens_seconds;
+  // uint8_t minutes;
+  // uint8_t tens_minutes;
+  // uint8_t hour;
+  // uint8_t tens_hour;
 
-  RTC_DateTypeDef gDate;
-  uint8_t day;
-  uint8_t tens_day;
-  uint8_t month;
-  uint8_t tens_month;
-  uint8_t year;
-  uint8_t tens_year;
+  // RTC_DateTypeDef gDate;
+  // uint8_t day;
+  // uint8_t tens_day;
+  // uint8_t month;
+  // uint8_t tens_month;
+  // uint8_t year;
+  // uint8_t tens_year;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_RTC_GetTime(&hrtc, &gTime, RTC_FORMAT_BIN);
-    seconds  = gTime.Seconds % 10;
-    tens_seconds = gTime.Seconds / 10;
-    minutes  = gTime.Minutes % 10;
-    tens_minutes = gTime.Minutes / 10;
-    hour  = gTime.Hours % 10;
-    tens_hour = gTime.Hours / 10;
+    Display_AlphaWorldlines();
+    // HAL_RTC_GetTime(&hrtc, &gTime, RTC_FORMAT_BIN);
+    // seconds  = gTime.Seconds % 10;
+    // tens_seconds = gTime.Seconds / 10;
+    // minutes  = gTime.Minutes % 10;
+    // tens_minutes = gTime.Minutes / 10;
+    // hour  = gTime.Hours % 10;
+    // tens_hour = gTime.Hours / 10;
 
-    HAL_RTC_GetDate(&hrtc, &gDate, RTC_FORMAT_BIN);
-    day  = gDate.Date % 10;
-    tens_day = gDate.Date / 10;
-    month  = gDate.Month % 10;
-    tens_month = gDate.Month / 10;
-    year  = gDate.Year % 10;
-    tens_year = gDate.Year / 10;
+    // HAL_RTC_GetDate(&hrtc, &gDate, RTC_FORMAT_BIN);
+    // day  = gDate.Date % 10;
+    // tens_day = gDate.Date / 10;
+    // month  = gDate.Month % 10;
+    // tens_month = gDate.Month / 10;
+    // year  = gDate.Year % 10;
+    // tens_year = gDate.Year / 10;
 
-    if (temp == 0){
-      Nixie8(seconds);
-      Nixie7(tens_seconds);
-      Nixie5(minutes);
-      Nixie4(tens_minutes);
-      Nixie2(hour);
-      Nixie1(tens_hour);
-      HAL_Delay(1);
-    }
+    // if (temp == 0){
+    //   Nixie8(seconds);
+    //   Nixie7(tens_seconds);
+    //   Nixie5(minutes);
+    //   Nixie4(tens_minutes);
+    //   Nixie2(hour);
+    //   Nixie1(tens_hour);
+    //   HAL_Delay(1);
+    // }
 
-    if (temp == 1){
-      Nixie8(day);
-      Nixie7(tens_day);
-      Nixie5(month);
-      Nixie4(tens_month);
-      Nixie2(year);
-      Nixie1(tens_year);
-      HAL_Delay(1);
-    }
+    // if (temp == 1){
+    //   Nixie8(day);
+    //   Nixie7(tens_day);
+    //   Nixie5(month);
+    //   Nixie4(tens_month);
+    //   Nixie2(year);
+    //   Nixie1(tens_year);
+    //   HAL_Delay(1);
+    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -235,9 +236,9 @@ static void MX_RTC_Init(void)
 
   /** Initialize RTC and set the Time and Date 
   */
-  sTime.Hours = 19;
-  sTime.Minutes = 27;
-  sTime.Seconds = 35;
+  sTime.Hours = 20;
+  sTime.Minutes = 0;
+  sTime.Seconds = 0;
 
   if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
   {

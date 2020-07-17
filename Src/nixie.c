@@ -999,15 +999,15 @@ void Display_AlphaWorldlines(){
     f =  Alpha_Worldlines[i] % 10;
     Loop_All_Digits();
     for(uint8_t j = 0; j < 100; j++){
-      Nixie1(11);
+      Nixie3(11);
       Clear_Nixie_Buffer();
-      Nixie1(a);
+      Nixie3(a);
       Clear_Nixie_Buffer();
-      Nixie2(b);
+      Nixie4(b);
       Clear_Nixie_Buffer();
-      Nixie4(c);
+      Nixie5(c);
       Clear_Nixie_Buffer();
-      Nixie5(d);
+      Nixie6(d);
       Clear_Nixie_Buffer();
       Nixie7(e);
       Clear_Nixie_Buffer();
@@ -1026,16 +1026,16 @@ void Loop_All_Digits(){
       Nixie7(i);
       HAL_Delay(1);
       Clear_Nixie_Buffer();
+      Nixie6(i);
+      HAL_Delay(1);
+      Clear_Nixie_Buffer();
       Nixie5(i);
       HAL_Delay(1);
       Clear_Nixie_Buffer();
       Nixie4(i);
       HAL_Delay(1);
       Clear_Nixie_Buffer();
-      Nixie2(i);
-      HAL_Delay(1);
-      Clear_Nixie_Buffer();
-      Nixie1(i);
+      Nixie3(i);
       HAL_Delay(1);
       Clear_Nixie_Buffer();
     }
