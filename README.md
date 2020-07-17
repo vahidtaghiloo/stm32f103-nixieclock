@@ -7,6 +7,7 @@ See Altium designer schematic and pcb. The high voltage (160 v)
 boost converter in build on pcb.
 
 displaying time/date
+
 ![nixieclock](nixieclock.gif)
 
 divergence meter displaying alpha worldlines (Steins;Gate anime)
